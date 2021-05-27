@@ -1,0 +1,26 @@
+cvList = list()
+
+# Create 5 dictionaries. Each dictionary should represent a CV.
+
+cv1 = {"Name_Surname":"Daniel Jackson", "Expertise":[{"Main": "Archeology", "Secondary": "Ancient Writing Systems, Languages and Cultures"}], "Education":[{"Grade":"University","Name": "University of Chicago"}]}
+cv2 = {"Name_Surname":"Samantha Carter", "Expertise":[{"Main": "Astrophysics", "Secondary": "Quantum Mechanics"}], "Education":[{"Grade":"University","Name": "Air Force Academy"}]}
+cv3 = {"Name_Surname":"Chris Beck", "Expertise":[{"Main": "Biomedical Science", "Secondary": "Biology"}], "Education":[{"Grade":"University","Name": "Yale School of Medicine"}]}
+cv4 = {"Name_Surname":"Melissa Lewis", "Expertise":[{"Main": "Oceanography", "Secondary": "Planetary Sciences/Astronomy"}], "Education":[{"Grade":"University","Name": "Naval Academy"}]}
+cv5 = {"Name_Surname":"Murphy Cooper", "Expertise":[{"Main": "Astronomy", "Secondary": "Physics"}], "Education":[{"Grade":"University","Name": "California Institute of Technology"}]}
+
+# Create a CV containing the information of the 5 created people
+
+cvList.append(cv1)
+cvList.append(cv2)
+cvList.append(cv3)
+cvList.append(cv4)
+cvList.append(cv5)
+
+# Print the information on CV’s created on the screen
+
+for i in cvList:
+    print("First Name : %s , Expertise : %s , Educations : %s" % (
+        i["Name_Surname"], 
+        ["%s(%s)" % (x["Main"], x["Secondary"]) for x in i["Expertise"]],
+        ["(%s)%s" % (x["Grade"], x["Name"]) for x in i["Education"]]
+        ))
